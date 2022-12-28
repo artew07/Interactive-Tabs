@@ -1,0 +1,112 @@
+:root {
+    --tabs-color: rgb(23, 24, 33);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(23, 24, 33);
+    font-family: 'Inter', sans-serif;
+    /* overflow: hidden; */
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.tabsContainer {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.tabs {
+    background-color: rgba(54, 56, 77, 0.5);
+    /* border: 1px solid #2a2c3c; */
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 8px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.tabs:hover::before {
+    opacity: 1;
+}
+
+.tabs::before {
+    background: radial-gradient(
+    120px circle at var(--mouse-x) var(--mouse-y),
+    rgba(67, 70, 98, 0.4), 
+    transparent 40%
+);
+    border-radius: inherit;
+    content: "";
+    opacity: 0;
+    transition: opacity 400ms;
+    height: 100%;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    z-index: 3;
+}
+
+.tabs::before,
+.tabs > .tabsBorder {
+    background: radial-gradient(
+    120px circle at var(--mouse-x) var(--mouse-y),
+    rgba(172, 173, 182, 0.776), 
+    transparent 40%
+);
+    z-index: 1;
+}
+
+
+
+.tabs > .tabsContent {
+    background-color: var(--tabs-color);
+    border-radius: inherit;
+    margin: -7px;
+    padding: 8.5px;
+    position: relative;
+    z-index: 2;
+}
+
+button.tab{
+    padding: 8px 16px;
+    background-color: transparent;
+    border-radius: 16px;
+    border: 0;
+    color: #e0e1eb91;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: ease-in-out 150ms;
+ }
+
+button.tab:hover{
+    padding: 8px 16px;
+    background-color: #23243099;
+    border-radius: 32px;
+    border: 0;
+    color: #E0E1EB;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.tab.active{
+    padding: 8px 16px;
+    background-color: #23243099;
+    border-radius: 32px;
+    border: 0;
+    color: #E0E1EB;
+    font-size: 15px;
+    font-weight: 400;
+}
