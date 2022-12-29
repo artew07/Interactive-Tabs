@@ -25,13 +25,15 @@ body {
 
 .circleGradient {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100px;
     height: 100px;
-    background: radial-gradient(50% 50% at 50% 50%, #EEEEEE 0%, #4714b4a5 100%);
-    margin:25% 25% 25% 25%;
-    width:40%;
+    width: 50%;
     filter: blur(97px);
+    background: radial-gradient(50% 50% at 50% 50%, #A686EA 0%, #4714b4a5 100%);
 }
+
 
 
 .tabs {
@@ -105,7 +107,7 @@ button.tab{
     background-color: transparent;
     border-radius: 16px;
     border: 0;
-    color: #e0e1eb91;
+    color: #e0e1eb50;
     font-size: 15px;
     font-weight: 400;
     cursor: pointer;
@@ -127,7 +129,7 @@ button.tab:hover{
 
 .tab.active{
     padding: 8px 16px;
-    background-color: hsla(233, 18%, 12%, 0.2);
+    background-color: hsla(230, 20%, 14%, 0.3);
     border-radius: 32px;
     border: 0;
     color: #E0E1EB;
